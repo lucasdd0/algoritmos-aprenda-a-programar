@@ -1,0 +1,26 @@
+package exercicios;
+import java.util.Scanner;
+public class exercicio25 {
+	public static void main(String[] args) {
+		Scanner input = new Scanner (System.in);
+		
+		int i, n;
+		
+		System.out.println("x: ");
+		n = input.nextInt();
+		
+		int vetor [] = new int [n];
+		
+		for (i = 0; i < n; i++);
+		{
+			System.out.println(vetor[n]);
+		}
+		
+		
+		
+		
+		
+		
+		input.close();
+	}
+}

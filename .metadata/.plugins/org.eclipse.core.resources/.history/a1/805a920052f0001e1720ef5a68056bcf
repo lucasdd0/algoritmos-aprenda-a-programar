@@ -1,0 +1,22 @@
+package exercicios;
+import java.util.Scanner;
+public class exercicio25 {
+	public static void main(String[] args) {
+		Scanner input = new Scanner (System.in);
+		
+		int i;
+		int vetor [] = new int [5];
+		
+		for (i = 0; i < 5; i++);
+		{
+			System.out.println("Digite o " + i + "º numero: ");
+		}
+		
+		
+		
+		
+		
+		
+		input.close();
+	}
+}

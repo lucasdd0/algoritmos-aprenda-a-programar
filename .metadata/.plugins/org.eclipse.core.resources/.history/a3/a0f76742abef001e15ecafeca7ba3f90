@@ -1,0 +1,30 @@
+package exercicios;
+import java.util.Scanner;
+public class exercicio20 {
+	public static void main(String[] args) {
+		Scanner input = new Scanner (System.in);
+		
+		double vetor [] = new double [10];
+		int i;
+		double total = 0;
+		
+		for (i = 0; i <= 9; i++)
+		{
+			System.out.println("Informe o preço do produto " + (i+1) + " :");
+			vetor[i] = input.nextDouble();
+			total += vetor[i];
+		}
+		
+		
+		System.out.println("Suas compras foram: ");
+		for (i = 0; i <= 9; i++)
+		{
+			System.out.println("Compra " + (i + 1) + " -> " + vetor[i]);
+		}
+		
+		System.out.println("\nO toral da sua compra foi de: " + total);
+		
+		
+		input.close();
+	}
+}

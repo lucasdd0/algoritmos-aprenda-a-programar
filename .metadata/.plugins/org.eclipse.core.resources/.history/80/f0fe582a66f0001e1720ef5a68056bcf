@@ -1,0 +1,34 @@
+package exercicios;
+import java.util.Scanner;
+public class exercicio24 {
+	public static void main(String[] args) {
+		Scanner input = new Scanner (System.in);
+		
+		int i, j, c;
+		
+		
+		int v [] = {5, 12, 2, 17, 23, 1};			//total de elementos
+		
+		for (i = 0 ; i < (v.length-1) ; i++)		//for (i) controla cada uma das posições com a variável i. Visa localizar o menor número e leva-lo para a posição correta. Quando pegar o primeiro número, vai partir para o segundo e leva-lo para a posição correta.
+		{						//-1 é para ter certeza que não vai dar erro
+			for (j = i+1 ; j < v.length ; j++)		//for (j) posição que vai resceber o elemento.
+			{		//vai analisar o segundo, terceiro, quarto... termo
+				if (v[i] > v[j])
+				{
+					c = v[i];
+					v[i] = v[j];					//troca entre os elementos
+					v[j] = c;
+				}
+			}
+		}
+		for (i = 0 ; i < v.length ; i++)
+		{
+			System.out.print(v[i] + ", ");
+		}
+		
+		
+		
+		input.close();
+	}
+
+}

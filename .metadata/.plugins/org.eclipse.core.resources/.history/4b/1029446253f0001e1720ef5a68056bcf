@@ -1,0 +1,23 @@
+package exercicios;
+import java.util.Scanner;
+public class exercicio25 {
+	public static void main(String[] args) {
+		Scanner input = new Scanner (System.in);
+		
+		double vetor [] = new double [5];
+		int i;
+		
+		for (i = 0; i <= 4; i++)
+		{
+			System.out.println("Informe o preço do produto " + (i+1) + " :");
+			vetor[i] = input.nextDouble();
+		}
+		
+		
+		
+		
+		
+		
+		input.close();
+	}
+}

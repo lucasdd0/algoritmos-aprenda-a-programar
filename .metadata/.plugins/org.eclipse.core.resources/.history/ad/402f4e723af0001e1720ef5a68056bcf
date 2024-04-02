@@ -1,0 +1,42 @@
+package exercicios;
+import java.util.Scanner;
+public class exercicio24 {
+	public static void main(String[] args) {
+		Scanner input = new Scanner (System.in);
+		
+		int i, j, n, c;
+		
+		System.out.println("Total de números: ");
+		n = input.nextInt();
+		
+		int v [] = new int [n];
+		
+		for (i = 0 ; i < n ; i++)
+		{
+			System.out.println("Digite o " + (i+1) + "° número: ");
+			v [i] = input.nextInt();
+		}
+		
+		for (i = 1 ; i < n-1 ; i++)
+		{
+			for (j = 1 ; j < n ; j++)
+			{
+				if (v[i] > v[j])
+				{
+					c = v[i];
+					v[i] = v[j];
+					v[j] = c;
+				}
+			}
+		}
+		for (i = 1 ; i < n ; i++)
+		{
+			System.out.print(v[i] + ", ");
+		}
+		
+		
+		
+		input.close();
+	}
+
+}

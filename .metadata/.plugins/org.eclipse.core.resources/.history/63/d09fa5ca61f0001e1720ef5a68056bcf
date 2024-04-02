@@ -1,0 +1,42 @@
+package exercicios;
+import java.util.Scanner;
+public class exercicio24 {
+	public static void main(String[] args) {
+		Scanner input = new Scanner (System.in);
+		
+		int i, j, n, c;
+		
+		System.out.println("Total de números: ");
+		n = input.nextInt();
+		
+		int v [] = new int [6];						//total de elementos
+		
+		for (i = 0 ; i < n ; i++)
+		{
+			System.out.println("Digite o " + (i+1) + "° número: ");
+			v [i] = input.nextInt();
+		}
+		
+		for (i = 0 ; i < (v.length-1) ; i++)		//for (i) controla cada uma das posições com a variável i. Visa localizar o menor número e leva-lo para a posição correta. Quando pegar o primeiro número, vai partir para o segundo e leva-lo para a posição correta.
+		{
+			for (j = i+1 ; j < v.length ; j++)		//for (j) posição que vai resceber o elemento.
+			{		//vai anaçisar o segundo termo
+				if (v[i] > v[j])
+				{
+					c = v[i];
+					v[i] = v[j];
+					v[j] = c;
+				}
+			}
+		}
+		for (i = 0 ; i < n ; i++)
+		{
+			System.out.print(v[i] + ", ");
+		}
+		
+		
+		
+		input.close();
+	}
+
+}
