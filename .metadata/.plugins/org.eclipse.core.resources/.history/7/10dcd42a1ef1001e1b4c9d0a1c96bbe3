@@ -1,6 +1,6 @@
 package exercicios;
-import java.util.Scanner;					//a diferença entre esse e o anterior: o anterior vai invertendo o primeiro valor até ficar certo
-public class exercicio26{					//e esse muda de uma vez pois o menor valor fica armazenado em min
+import java.util.Scanner;
+public class exercicio26{
 	public static void main(String[] args) {
 		Scanner input = new Scanner (System.in);
 		
@@ -22,7 +22,7 @@ public class exercicio26{					//e esse muda de uma vez pois o menor valor fica a
 			min = i;						// Define min como a posição atual i
 			for (j = i+1; j < n; j++)		// Loop para encontrar o índice do menor elemento no subarray não ordenado
 			{								
-				if (v[min] > v[j])			// Verifica se o elemento na posição i é maior que o elemento na posição j
+				if (v[i] > v[j])			// Verifica se o elemento na posição i é maior que o elemento na posição j
 				{
 					min = j;				// Se sim, atualiza min para j
 				}
