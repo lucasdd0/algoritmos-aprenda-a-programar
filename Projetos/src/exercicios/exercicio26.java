@@ -9,7 +9,7 @@ public class exercicio26{					//e esse muda de uma vez pois o menor valor fica a
 		System.out.println("Digite o total de repetições: ");
 		n = input.nextInt();
 		
-		int v [] = new int [n];
+		int v[] = new int [n];
 		
 		for (i = 0; i < n; i++)
 		{

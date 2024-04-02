@@ -1,0 +1,40 @@
+package exercicios;
+import java.util.Scanner;
+public class exercicio27 {
+	public static void main(String[] args) {
+		Scanner input = new Scanner (System.in);
+		
+		int u, iu, j, c;
+		
+		System.out.println("Digite o total de repetições: ");
+		u = input.nextInt();
+		
+		int v[] = new int [u];
+		
+		for (j = 0; j < u; j++);
+		{
+			System.out.println("Digite o " + j + "° número: ");
+			 v[j]= input.nextInt();
+		}
+		
+		while(u > 1)
+		{
+			iu = 0;
+			for (j = 0; j < u-1; j++)
+			{
+				if (v[j] > v[j + 1])
+				{
+					c =[j];
+					v[j] = v[j + 1];
+					
+				}
+			}
+		}
+		
+		
+		
+		
+		input.close();
+	}
+
+}
