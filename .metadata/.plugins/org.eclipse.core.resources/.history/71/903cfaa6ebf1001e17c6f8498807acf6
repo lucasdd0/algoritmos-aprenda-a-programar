@@ -65,6 +65,7 @@ public class exercicio28{
 		}
 
 
+		
 		input.close();
 	}
 }
