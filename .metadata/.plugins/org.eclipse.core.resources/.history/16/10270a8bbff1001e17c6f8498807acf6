@@ -1,0 +1,23 @@
+package exercicios;
+import java.util.Scanner;
+public class exercicio27{							//compara dois a dois elementos e troca
+	public static void main(String[] args) {
+		Scanner input = new Scanner (System.in);
+		
+		int u, iu, j, n;
+		
+		System.out.println("Digite o total de repetições: ");
+		n = input.nextInt();
+		
+		int v[] = new int [n];
+		
+		for (j = 0; j < n; j++)
+		{
+			System.out.println("Digite o " + (j + 1) + "° número: ");
+		}
+		
+		
+		
+		input.close();
+	}
+}

@@ -1,0 +1,67 @@
+package exercicios;
+import java.util.Scanner;
+public class exercicio28{							
+	public static void main(String[] args) {			//a sequência será dividida em pedaços menores e ocorre uma ordenação deses processos para que ao final o todo esteja em ordem	
+		Scanner input = new Scanner (System.in);
+		
+		int n, c, base, h, i, j;
+		boolean continua;
+		
+		System.out.println("Digite o total de repetições: ");
+		n = input.nextInt();
+		
+		int v [] = new int [n];
+		
+		for (j = 0; j < n; j++)
+		{
+			System.out.println("Digite o " + (j + 1) + "° número: ");
+			v[j] = input.nextInt();
+		}
+		
+		
+		
+		
+		h = 1;
+		base = 3;
+		
+		do
+		{
+			h = base * h + 1;
+		}while (h < n);					//repetir enquanto h for menor que n (ou seja, o objetivo é ser maior q n)
+		
+		
+		
+		
+		do 
+		{
+			h = h/base;
+			for (i = h + 1; i < n; i++)
+			{
+				c = v[i];
+				j = i;
+				continua = true;
+				
+				while (v[j - h] > c && continua)
+				{
+					v[j] = v[j - h];
+					j = j - h;
+					if (j <= h)
+					{
+						continua = false;
+					}
+				} v[j] = c;
+			}
+			
+			
+		}while (h != 1);
+		
+		for (j = 0; j < n; j++)
+		{
+			System.out.print(v[j] + " ");
+		}
+
+
+		
+		input.close();
+	}
+}
