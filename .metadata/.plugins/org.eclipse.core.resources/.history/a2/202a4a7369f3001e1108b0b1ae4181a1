@@ -1,0 +1,46 @@
+package exercicios;
+import java.util.Scanner;
+public class exercicio31 {
+	public static void main(String[] args) {
+		Scanner input = new Scanner (System.in);
+		
+		int n, buscando, achou, i;
+		
+		System.out.println("Digite o tamanho do array: ");
+		n = input.nextInt();
+		
+		int v [] = new int [n];
+		
+		
+		for (i = 0; i < n; i++)
+		{
+			System.out.println("Digite o " + (i + 1) + "º elemento: ");
+			v[i] = input.nextInt();	
+		}
+		
+		System.out.println("Digite o valor a ser buscado: ");
+		buscando = input.nextInt();
+		
+		boolean achou = false;
+		int inicio = 0;
+		int fim = n - 1;				//o vetor começa com 0, logo se são, por exemplo, 8 posições, a ultima vai ser a 7
+		int meio;
+		
+		while (inicio <= fim)
+		{
+			meio = (int) ((inicio + fim)/2);		//vai pegar apenas a parte inteira dos índices, exemplo: 7 + 0/ 2 = 3,5 arredonda para baixo = 3		
+			if (v[meio] == buscando)
+			{
+				achou == true;
+				break;
+			}
+		}
+		
+		
+		
+		
+		
+		input.close();
+	}
+
+}

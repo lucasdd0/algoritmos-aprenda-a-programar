@@ -1,0 +1,44 @@
+package exercicios;
+import java.util.Scanner;
+public class exercicio30 {
+	public static void main(String[] args) {
+		Scanner input = new Scanner (System.in);
+		
+		int n, valor, i;
+		boolean achou = true;
+		
+		System.out.println("Digite o tamanho do array: ");
+		n = input.nextInt();
+		
+		int v [] = new int [n];
+		
+		
+		for (i = 0; i < n; i++)
+		{
+			System.out.println("Digite o " + (i + 1) + "º elemento: ");
+			v[i] = input.nextInt();	
+		}
+		
+		System.out.println("Digite o valor a ser buscado: ");
+		valor = input.nextInt();
+		
+		for (i = 0; i < n; i++)
+		{
+			if (v[i] == valor)
+			{
+				achou = true;
+				break;
+			}
+			else
+			{
+				achou = false;
+			}
+		}
+		
+		
+		
+		
+		input.close();
+	}
+
+}

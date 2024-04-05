@@ -1,0 +1,46 @@
+package exercicios;
+import java.util.Scanner;
+public class exercicio29 {
+	public static void main(String[] args) {
+		Scanner input = new Scanner (System.in);
+		
+		int n, v, A, achei, i;
+		
+		System.out.println("Digite a quantidade de elemetos que deseja inserir: ");
+		n = input.nextInt();
+		
+		int A [] = new int [n - 1];
+		
+		
+		for (i = 0; i < n; i++)
+		{
+			System.out.println("Digite o " + (i + 1) + "º número: ");
+			A[i] = input.nextInt();	
+		}
+		
+		System.out.println("Digite o valor a ser buscado: ");
+		v = input.nextInt();
+		
+		
+		achei = 0;
+		i = 0;
+		
+		while (i < n && achei == 0)
+		{
+			if (A[i] = v)
+			{
+				achei = 1;
+			}
+			else
+			{
+				i = i + 1;
+			}
+		}
+		
+		
+		
+		
+		input.close();
+	}
+
+}

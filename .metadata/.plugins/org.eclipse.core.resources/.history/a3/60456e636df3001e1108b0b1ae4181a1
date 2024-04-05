@@ -1,0 +1,58 @@
+package exercicios;
+import java.util.Scanner;
+public class exercicio32{							
+	public static void main(String[] args) {	
+		Scanner input = new Scanner (System.in);
+		
+		int n, c, base, h, i, j;
+		
+		
+		System.out.println("Digite o total de repetições: ");
+		n = input.nextInt();
+		
+		int v [] = new int [n];
+		
+		for (i = 0; i < n; i++)
+		{
+			System.out.println("Digite o " + (i + 1) + "° número: ");
+			v[i] = input.nextInt();
+		}
+		
+		
+		
+		
+		
+		
+		
+		h = 1;
+		base = 3;							
+		
+		while (h < n)
+		{
+			h = base * h + 1;				
+		}									
+											
+		
+		
+		
+		
+		
+		while (h > 0)
+		{	
+			h = (int) Math.floor(h/base);	
+			
+			for (i = h; i < n; i++)			
+			{
+				c = v[i];
+				j = i;
+				
+				while (j >= h && v[j - h] > c)
+				{
+					v[j] = v[j - h];
+					j = j - h;
+				} 
+				v[j] = c;
+			}
+		}
+	}
+}

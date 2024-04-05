@@ -1,0 +1,52 @@
+package exercicios;
+import java.util.Scanner;
+public class exercicio29 {
+	public static void main(String[] args) {
+		Scanner input = new Scanner (System.in);
+		
+		int n, valor, achei, i;
+		
+		System.out.println("Digite o tamanho do array: ");
+		n = input.nextInt();
+		
+		int A [] = new int [n];
+		
+		
+		for (i = 0; i < n; i++)
+		{
+			System.out.println("Digite o " + (i + 1) + "º elemento: ");
+			A[i] = input.nextInt();	
+		}
+		
+		System.out.println("Digite o valor a ser buscado: ");
+		valor = input.nextInt();
+		
+		
+		achei = 0;
+		i = 0;
+		
+		while (i < n)
+		{
+			if (A[i] == valor)
+			{
+				achei = 1;
+			}
+			else
+			{
+				i = i + 1;
+			}
+		}
+		
+		if (achei == 1)
+		{
+			System.out.println("O valor " + valor + " foi encontrado no indice " + i + " do array"); // lembrando que o array começa sempre com 0		
+		}
+		else
+		{
+			System.out.println("O valor " + valor + "não foi encontrado");
+		}
+		
+		input.close();
+	}
+
+}
